@@ -14,13 +14,9 @@ class ICommandImplTest {
         ICommand iCmd = new ICommandImpl();
         // Create command depending on OS - TODO: check exit status
         if(System.getProperty("os.name").toLowerCase().contains("win")) {
-            cmd.add("cmd.exe");
-            cmd.add("/c");
             cmd.add("dir");
             cmd.add("/a");
         } else { // Assert linux environment if not windows
-            cmd.add("sh"); // posix compliant shell
-            cmd.add("-c"); // run cmd
             cmd.add("ls"); // cmd to run
             cmd.add("-l"); // arg
         }

@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.util.List;
 
 public interface ICommand {
-    // First element of the list cmd is the command to run and the next are its arguments
-    // Returns a String with the output from cmd
-    // It should work in both linux and windows environments
+    // First element of the list cmd is the command and the next are arguments
     String runShellCmd(List<String> cmd) throws IOException;
 }
